@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200|Roboto:100,200');
+
+body{
+    margin: 0px;
+    padding-bottom: 160px;
+}
+
+#backButton{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+#backButton img:hover{
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.38);
+    box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.38);
+
+}
+#backButton img{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+
+
+
+header{
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/bg.jpg) no-repeat;
+}
+#headerContainer{
+    height: 400px;
+    max-width: 680px;
+    margin: auto;
+}
+#faceImage{
+    height: 180px;
+    margin-top: 110px;
+    margin-left: 30px;
+    border-radius: 50%;
+    float: left;
+}
+#headerTextContainer{
+    height: 300px;
+    max-width: 480px;
+    float: left;
+    text-align: center;
+}
+#joakimJohansson{
+    margin: 0px;
+    margin-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: white;
+    margin-top: 170px;
+}
+#headerTextContainer span{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    color: white;
+}
+main{
+    min-height: 300px;
+    max-width: 800px;
+    padding: 16px;
+    margin: auto;
+}
+main h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-top: 30px;
+}
+
+#projectsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1080px;
+    min-height: 200px;
+}
+.projectItem{
+    width: 260px;
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+    margin: 5px 0px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.projectItem:hover{
+    -moz-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}
+.projectItemContainer{
+    width: 260px;
+    height: 160px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+.projectItemTitle{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: white;
+    margin-top: 64px;
+    display: inline-block;
+}
+.projectItemDate{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: white;
+}
+
+/* Content */
+
+#itemProjectsContainer{
+    width: 700px;
+    min-height: 300px;
+    float: left;
+}
+#itemDesc{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    color: #555;
+}
+.itemText{
+    float: none;
+    text-align: left;
+}
+#contentContainer{
+    width: 700px;
+}
+
+/* Sidebar */
+aside{
+    width: 344px;
+    float: right;
+    min-height: 300px;
+    text-align: center;
+}
+#sidebarImage{
+    height: 180px;
+    margin-top: 40px;
+    border-radius: 90px;
+}
+#sidebarJoakimJohansson{
+    margin: 20px 0px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+#sidebarSlogan{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    color: #555;
+}
+#sidebarText{
+    color: black;
+    margin: 20px 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+#sidebarIcons{
+    width: 100%;
+}
+
+/* Item stuff */
+#itemImage{
+    width: 100%;
+    margin-top: 20px;
+}
+#itemProjectsContainer{
+    margin-bottom: 160px;
+    
+}
+
+/* Frontpage post styling */
+#post_area{
+    margin-top: 50px;
+}
+.post{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+.post_title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin: 0px;
+    padding: 30px 0px 10px 0px;
+}
+.post_number{
+    font-size: 25px;
+    background-color: #8596be;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.post_question{
+    
+}
+.post_code{
+    background-color: #efefef;
+    padding: 14px;
+    margin: 0px 0px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.post_desc{
+    font-size: 14px;
+}
+footer{
+    margin: 40px auto 0px auto;
+    width: 200px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+nav{
+    width: 100%;
+}
+#nav_container{
+    text-align: center;
+    border-bottom: 1px solid #efefef;
+    margin: auto;
+}
+nav a{
+    padding: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+}
+nav a:hover{
+    background-color: #8596BE;
+    color: white;
+}
+#home_button{
+    position: fixed;
+    display: block;
+    background-color: rgba(133, 150, 190, .5);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    top: 10px;
+    left: 10px;
+    font-family: sans-serif;
+    border: 2px solid rgba(133, 150, 190, .5);
+}
+#home_button:hover{
+    background-color: white;
+    color: #555;
+}
+
+
+/* MOBILE */
+@media only screen 
+  and (max-device-width: 560px) {
+
+      #headerTextContainer{
+          width: 100%;
+          
+      }
+      #faceImage{
+          margin: auto;
+          display: inline-block;
+          height: 240px;
+      }
+      #headerContainer{
+          height: auto !IMPORTANT;
+          text-align: center;
+          padding: 60px 0px;
+      }
+      #headerTextContainer{
+          height: auto;
+          max-width: 800px;
+          text-align: center;
+          margin-top: 20px;
+          float: none;
+      }
+      #joakimJohansson{
+          margin: 0px;
+      }
+      #img_container{
+          display: inline-block;
+      }
+      .post_title{
+          margin: 20px 0px 10px 0px;
+      }
+
+}
+
+
+
+
+
+

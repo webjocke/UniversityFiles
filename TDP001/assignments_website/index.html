@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="sv">
+    <head>
+        <title>Hem - Joakim Johansson</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+        <a id="home_button" href="#headerContainer">Home</a>
+    
+        <!-- Hela headern -->
+        <header>
+            <div id="headerContainer">
+                <span id="img_container"><img id="faceImage" src="https://github.com/webjocke.png" alt="Bild på Joakim Johansson" title="Bild på Joakim Johansson"></span>
+                <div id="headerTextContainer">
+                    <h1 id="joakimJohansson">JOAKIM JOHANSSON</h1>
+                    <span>Innovativ Programmering is the real deal</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div id="nav_container">
+                <a href="#Introduktionslaboration">Introduktionslaboration</a>
+                <a href="#emacs">Emacs</a>
+                <a href="#Terminalkommandon_V35">Terminalkommandon V35</a>
+            </div>
+        </nav>
+        <main>
+            
+            <!-- Sektionen med alla inlägg -->
+            <section id="post_area">
+                
+                <article class="post">
+                
+                    <h1 class="post_title" id="Introduktionslaboration">Introduktionslaboration</h1>
+                    <hr>
+                    
+                    <span class="post_question"></span>
+                    <br><br>
+                    <span class="post_desc">Uppgiften går ut på att sortera raderna en lista (som kommer ifrån resultat.txt) plus att muliplisera ihop varje rads nummer och lägga dem först i varje rad istället för sist som som default. Man får bara använda terminalen och dess commandon.</span>
+                    <br><br>
+                    <span class="post_desc">Texten jag började med i filen resultat.txt:</span>
+                    <br>
+                    <span class="post_code"><code><pre>Mikaela Andersson       14   0  17
+David Fors               8  12  11
+Klas Hägglund            0  13   9
+Oskar Holmqvist          9  12  10
+Gustaf Karlsson         12  14  13
+Annica Rundgren         17  10  15
+Marcus Carlsson         12   9  12
+Johanna Rönnberg         9  15  13
+Josefine Carlson        18  14  16
+Magnus Ahlsten          13  18  14
+Jerker Leo               0   0  11
+Jan-Olof Kärrsgård       8  11  13
+Siv Tidblom             11   9  12
+Mats Karlzon            15  17  10
+Göran Johansson         16  19  15
+Britt Lidell             0  14   9
+Yngve Johanson          10  11   8
+Ingrid Lindgren          8  13  13
+Kjell Djurstedt         12  12  12
+Lennart Andersson        9  10  13
+Elisabeth Björklind     15  12  10</pre></code></span>
+                    <br><br>
+                    <span class="post_desc">Och så här vill vi ha det när det är klart:</span>
+                    <br>
+                    <span class="post_code"><code><pre>50 Göran Johansson
+48 Josefine Carlson
+... * Bortaget så för att det inte ska ta för mycket plats *
+23 Britt Lidell
+22 Klas Hägglund
+11 Jerker Leo
+</pre></code></span>
+                    <br><br>
+                    
+                    <span class="post_desc">Och detta är den slutgiltiga följden av kommandon som fixar allt!</span>
+                    <span class="post_code"><code><pre>
+paste -d' ' 
+<(sed "s/  */+/g" resultat.txt | cut -d'+' -f3- | bc) 
+<(cut -d' ' -f1-2 resultat.txt) 
+| sort -nr
+</pre></code></span>
+                    <br>
+                    <br>
+
+                    <span class="post_desc">Man börjar med komandot paste, vilket sätter ihop rader ifrån två olika filer. Genom att specificera -d" " så säger man till den att den ska lägga ett space mellan ihopslagningen av varje rad. Så jag skickar in en "fil" som innehåller siffror på varje rad och en "fil" som innehåller ett namn på varje rad.
+
+                    <br>
+                    <br>
+
+                    <a style="color: blue">sed "s/  */+/g" resultat.txt | cut -d'+' -f3- | bc<a><br>
+                    Den högen med komandon som skapar listan med sifforna, börjars med att man tar in resultat.txt och ersätter alla mellanslag som är 1 eller flera brevid varande emot endast ett space. Sedan så tar den bort allt som är framför kolumn tre med hjälp av cut-kommandot. Sedan så ersätter man alla mellanslag med plus-tecken och summerar varje rad med hjälp av bc-kommandot.
+
+                    <br>
+                    <br>
+
+                    <a style="color: blue">cut -d' ' -f1-2 resultat.txt<a><br>
+                    Delar upp alla filens (restultat.txt) rader med mellanrum och sparar bara de två första columerna.
+
+                    <br>
+                    <br>
+
+                    <a style="color: blue">| sort -nr<a><br>
+                    Sorterar listan efter numerisk storlek i fallande ordning.
+
+                    <br>
+                    <br>
+
+
+
+                    </span>
+                    
+                    
+                </article>
+
+                <article class="post">
+                
+                    <h1 class="post_title" id="emacs">Emacs (föreläsning 30/8)</h1>
+                    <hr>
+                    
+                    <br>
+                    <span class="post_number">Kortkommandon!</span>
+                    <span class="post_question"></span>
+                    <br><br>
+                    <span class="post_desc">Uppgiften går ut på att sortera raderna en lista plus att muliplisera ihop varje rads nummer och lägga dem först i varje rad. Trickset är att man bara få använda kortkomandon i EMACS!</span>
+                    <br><br>
+                    <span class="post_desc">Texten jag började med:</span>
+                    <br>
+                    <span class="post_code"><code><pre>Mikaela Andersson       14   0  17
+David Fors               8  12  11
+Klas Hägglund            0  13   9
+Oskar Holmqvist          9  12  10
+Gustaf Karlsson         12  14  13
+Annica Rundgren         17  10  15
+Marcus Carlsson         12   9  12
+Johanna Rönnberg         9  15  13
+Josefine Carlson        18  14  16
+Magnus Ahlsten          13  18  14
+Jerker Leo               0   0  11
+Jan-Olof Kärrsgård       8  11  13
+Siv Tidblom             11   9  12
+Mats Karlzon            15  17  10
+Göran Johansson         16  19  15
+Britt Lidell             0  14   9
+Yngve Johanson          10  11   8
+Ingrid Lindgren          8  13  13
+Kjell Djurstedt         12  12  12
+Lennart Andersson        9  10  13
+Elisabeth Björklind     15  12  10</pre></code></span>
+                    <br><br>
+                    <span class="post_desc">Och så här vill vi ha det när det är klart:</span>
+                    <br>
+                    <span class="post_code"><code><pre>31 Arvid Fors
+39 Clas Hägglund
+42 Oskar Holmqvist
+....
+</pre></code></span>
+                    <br><br>
+                    
+                    <span class="post_desc">Och detta är den slutgiltiga följden av kommandon som fixar allt!</span>
+                    <span class="post_code"><code><pre>
+C-x C-f resultat.txt                 #### Öppnar filen
+M-&lt;                                  #### Gå till början av filen
+C-x (                                #### Börja skapa ett macro
+C-e M-b M-b M-b                      #### Gå till slutet på raden, tillbaka lite
+(+ ␣ C-e )                           #### Sätt en (+ och ett mellanslag, sen )
+C-u C-x C-e                          #### Exikvera lisp kommandot inom paranteserna
+C-space M-b M-w C-a C-y              #### Markerar svaret och klistrar in i början
+␣ C-e M-b M-b M-b M-f C-k C-n C-a    #### Ett mellanslag och raderar allt onödigt
+C-x )                                #### Avslutar skapandet av macrot
+C-u O C-x e                          #### Kör macrot så många gånger det går
+C-x h                                #### Markerar allt i buffern
+C-u M-| sort                         #### Sorterar hela listan
+</pre></code></span>
+                    <br><br>
+                    
+                </article>
+                
+                <article class="post">
+                
+                    <h1 class="post_title" id="Terminalkommandon_V35">Terminalkommandon V35</h1>
+                    <hr>
+                    
+                    <br>
+                    <span class="post_number">1</span>
+                    <span class="post_question">Hur kan man med grep hitta alla rader med namn (förnamn eller efternamn) som slutar med tecknen "on"?</span>
+                    <br><br>
+                    <span class="post_code">grep 'on ' resultat.txt</span>
+                    <br><br>
+                    <span class="post_desc">Bashcommandot "grep" tar alla rader som har 'on ' i sig ifrån den länkade filen. Anledningen till att jag använder ett space i 'on ' är att i frågan står det att man ska bara ha med rader där det är ett förnamn eller efternamn som SLUTAR på on vilket gör att jag lade till ett space för att bara få de som har ett space direkt efter.</span>
+                    <br><br>
+                    
+                    <br>
+                    <span class="post_number">2</span>
+                    <span class="post_question">Skriv ut de fem första efternamnen som INTE avslutas med "son"!</span>
+                    <br><br>
+                    <span class="post_code">cut -d' ' -f2 resultat.txt | grep -m5 -v 'son'</span>
+                    <br><br>
+                    <span class="post_desc">Nu så kör vi cut-kommandot viket delar upp varje rad med mellanslag som avskiljare. Vi tar då den andra delen av varje rad med –f2 för att få ut endast efternamnen och inget annat.</span><br><br>
+                    <span class="post_desc">Grep tar tag i alla rader som har ‘son‘ i sig. –v säger att det ska vara ett negativt keyword, alltså att denna string får INTE vara med i raden. Jag använder sedan även -m5 för att begränsa resultatet till fem stycken rader.</span>
+                    <br><br>
+                    
+                    <br>
+                    <span class="post_number">3</span>
+                    <span class="post_question">I mappen /usr/lib finns det flera filer som har namn på formatet xxx.so.d, där xxx är dess namn och d är ett (eller flera separerade med .) heltal. Skriv ut alla dessa filers namn (dvs xxx-delen) till en fil med valfritt namn.</span>
+                    <br><br>
+                    <span class="post_code">ls 'usr/lib' | grep '.so. ' | cut –d'.' –f1 > hej.txt</span>
+                    <br><br>
+                    <span class="post_desc">Ls-kommandot säger att den ska lista alla filer som är i den bifogade länken. På outputen så gör ja grep vilket tar ut de rader som bara har '.so.' i sig eftersom vi vet att det är de filerna vi vill få tag på. Sedan så tar vi bort allt som är efter den första punkten eftersom vi vill bara ha namnet innan so-grejen. Slutligen så skriver vi ut resultatet till en fil på ligger i den mappen man står i.</span>
+                    <br><br>1
+                    
+                    <br>
+                    <span class="post_number">4</span>
+                    <span class="post_question">Ge ett kommando som (endast) skriver ut hur många rader i filen som har ett namn som har bokstäverna "an" efter varandra. (Bör bli 7)</span>
+                    <br><br>
+                    <span class="post_code">grep –i 'an' resultat.txt | wc -l</span>
+                    <br><br>
+                    <span class="post_desc">Grep tar tag i alla rader i textfilen som har stringen 'an' i sig. Jag har även lagt till -i för att 'an' inte ska vara specifikt till stora eller stor bokstäver. Resultatet sedan skickar jag vidare till kommandot wc med parametern -l för att få den att räkna hur många rader det är totalt i resultatet. Done!</span>
+                    <br><br>
+                    
+                    
+                </article>
+                
+
+            </section>
+            
+        </main>
+        
+        <!-- Fotter för random information -->
+        <footer>
+            
+            <span style="font-size: 12px">Site made by</span><br>Joakim Johansson
+            
+        </footer>
+        
+    </body>
+</html>
+
+
