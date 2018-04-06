@@ -1,5 +1,5 @@
-# UniversityFiles
-This is a collection of most of the files and code I wrote during the university time.
+# University Files
+A collection of projects files from the courses mainly from the Bachelor programme in Innovative Programming at Linköping Universty. 
 
-# Folder Structure
+# Folder Content
 Each course has it's own folder with some of the bigger projects having only links to their dedicated repositories.
