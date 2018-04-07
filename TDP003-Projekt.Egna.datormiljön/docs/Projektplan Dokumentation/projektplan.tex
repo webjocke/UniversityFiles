@@ -1,0 +1,286 @@
+\documentclass{TDP003mall}
+
+
+
+\newcommand{\version}{Version 1.1}
+\author{Arturas Aleksandrauskas, \url{artal938@student.liu.se}\\
+  Joakim Johansson, \url{joajo229@student.liu.se}}
+\title{Projektplanering}
+\date{2016-09-05}
+\rhead{Arturas Aleksandrauskas\\
+Joakim Johansson}
+ 
+
+
+\begin{document}
+\projectpage
+
+
+\section{Vad är detta?}
+\textit{Lite information om vad projektet handlar om}
+
+
+\subsection{Projektet!?}
+Detta är ett projekt som går ut på att man ska skapa en hemsidan med tillhörande serversida. Projektet går ut på att man ska göra en hemsidan som ska innehålla dynamisk information. Information som skickas med hemsidan ska komma ifrån en json-databas. Detta sker då genom ett pythonscript som körs på servern och använder sig utav modulerna flask och ninja. Databasen ska kunna fungera separat ifrån webbserver-flask-saken eftersom vi kommer att bygga ett API där imellan.
+
+\subsection{Hur ska slutprodukten se ut och användas till?}
+Slutprodukten kommer vara en presentaitons platform för redovisning av våra projekt, precis som detta projekt!
+
+Slutprodukten ska användas av skaparna där de ska kunna lägga upp framtida projekt. Det ska finnas flera sidor som man ska kunna besöka för att kunna hitta det projektet man vill på bästa sätt.
+
+Totalt ska det vara fyra stycken sidor. Hem, Lista Projekten, Lista Teknikerna och till sist sidan för att visa ett projekt.
+
+\subsection{Vad finns det för mål?}
+Målet med detta projektet är att vi ska lära oss hur man hanterar python tillsammans med webben.
+
+Vi har även olika delmål som vi har satt ut för att lättare kunna klara av alla deadlines. Dessa delmål man man kolla mer på under varje projekt i "Vad ska göras?" eller i "När ska vi göra det?" då de finns i en lång lista för enkel uppslagning.
+
+\newpage
+
+
+
+
+
+\section{Deadlines}
+\textit{Alla deadlines som finns i projektet}
+
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|l|X|}
+\hline
+
+Vecka & Dag och tid & Sak som behöver göras \\\hline 
+
+ & & \\
+
+Vecka 36 & Torsdag 23:59 & Planeringsdokument inlämnat \\
+ & & \\
+
+Vecka 37 & Torsdag 23:59 & LoFi prototyp inlämnad \\
+ & & \\
+
+Vecka 38 & Torsdag 23:59 & Första utkast av projektplanen inlämnat \\
+ & Torsdag 23:59 & Första versionen av den gemensamma installationsmanualen klar \\
+ & & \\
+
+Vecka 39 & Torsdag 23:59 & Alla ska ha bidragit med någon icke-trivial förbättring av antingen den gemensammma installationsmanualen eller de gemensamma testerna via git. \\
+ & Torsdag 23:59 & Eventuella brister i gemensamma installationsmanualen korrigerade \\
+ & Torsdag 23:59 & Eventuella brister projektplanen korrigerade och inlämnad \\
+ & Fredag 10:00 & Datalagret godkänt av assistent \\
+ & & \\
+
+Vecka 40 & Måndag 10:00 & FÖ - presentationslagret (Flask/Jinja) introduceras. \\
+ & & \\
+
+Vecka 41 & Torsdag 23:59 & Portfolion tillgänglig via openshift \\
+ & Torsdag 23:59 & Första versionen av systemdokumentationen inlämnad \\
+ & & \\
+
+Vecka 42 & Tisdag 12:00 & Systemdemonstration för annan grupp, grund för testdokumentet \\
+ & Torsdag 23:59 & Eventuella brister i systemdokumentationen korrigerade och inlämnade \\
+ & Torsdag 23:59 & Testdokumentation inlämnad \\
+ & Torsdag 23:59 & Individuellt reflektionsdokument inlämnat \\
+ & & \\
+
+Vecka 43 & & Muntlig tenta - tidsbokning kommer senare \\
+
+\\
+
+\hline 
+
+
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{Vad ska göras?}
+\textit{Alla moment som vi har planerat in att göra i detta projekt}
+
+\subsection{LoFi - Deadline v.37 Torsdag}
+\textit{Uppskattad tid: 10h \\ Tiden det tog: 6h}
+
+
+\subsubsection{Designa på papper enligt kraven}
+Vi kommer skissa i photoshop en enkel design på hur hemsidan kommer fungera och se ut. Sedan lägger vi in bilderna i ett latex-doumment där vi skriver användarmanualen.
+
+\subsubsection{Lämna in}
+Mål: Vi ska känna oss nöjda med desigen och ska ha lämat in innan v.37 Tisdag
+
+\subsection{Projektplan - Deadline v.39 Torsdag}
+\textit{Uppskattad tid: 30h \\ Tiden det tog: 24h}
+
+\subsubsection{Kolla upp kraven}
+Kolla upp kraven som finns på hemsidan och skapa en basic design i ett latex dokument.
+
+\subsubsection{Skriva projektplanen, första utkast}
+Skriv en grov projektplan så att alla krav är med.
+Mål: Klar med gorvs utkast v.38.
+
+\subsubsection{Komplettera}
+Fixa kompletteringen efter att John har dissat första utkastet.
+
+\subsubsection{Finish}
+Mål: Lämna in projektplanen och få godkänt senast i början på v.39.
+
+\subsection{API - Deadline v.39 Fredag}
+\textit{Uppskattad tid: 12h \\ Tiden det tog: 13h}
+
+\subsubsection{Kolla upp mall för API och Skapa strukturen}
+Skapa funktioner efter kravspecen. 
+
+\subsubsection{Skriva API:et}
+Skriv alla funktioner som finns med i API-mallen.
+Mål: Klara senast v.38.
+
+\subsubsection{Testa och felsöka}
+Rätta även eventuella fel som kommer upp efter att testet har körts.
+Mål: Lämna in i början på v.39.
+
+\subsection{Lagt till i OpenShift - Deadline v.41 Torsdag}
+\textit{Uppskattad tid: 2h \\ Tiden det tog: Unknown}
+
+\subsubsection{Ta reda på vad det är}
+...
+
+\subsubsection{Ladda upp det}
+...
+Mål: Va klar v.41 Måndag
+
+\subsection{Systemdokumentation - Deadline v.41 Torsdag}
+\textit{Uppskattad tid: 10h \\ Tiden det tog: None}
+
+\subsubsection{Ta reda på vad det är}
+...
+
+\subsubsection{Gör som man ska}
+...
+Mål: Va klar v.41 Måndag
+
+\subsection{Webbserver - Deadline v.42}
+\textit{Uppskattad tid: 10h \\ Tiden det tog: Unknown}
+
+\subsubsection{Kolla på tutorials på flask och ninja och testa runt lite}
+Börja testa i flask och lära sig hur det fungerar genom att kolla tutorials och söka runt i olika dokumentationer.
+
+\subsubsection{Skapa webbservern}
+Bygga webserver så att den kan hantera alla sidor som vi kommer använda oss av.
+
+\subsubsection{Lägg upp den live}
+Mål: Bli klara v.41
+
+\subsection{HTML/CSS - Deadline v.42}
+\textit{Uppskattad tid: 20h \\ Tiden det tog: Unknown}
+
+\subsubsection{Skapa HTML/CSS utifrån LoFi}
+Börja bygga sidan på rikitgt utav mallen/prototypen som gjort tidigare.
+
+\subsubsection{Mearge:a med med webbservern}
+Koppla ihop HTML/CSS med den tidigare skapade webbservern/flask/ninja.
+
+\subsubsection{Redovisa klart allt}
+Mål: Bli klara v.41
+
+\newpage
+
+
+
+
+
+\section{Vem ska göra det?}
+\textit{En lista på vem som ska göra vad för att effektivisera upp lätta moment}
+
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|}
+
+\hline
+Projekt & Uppdragstagare \\\hline 
+\\
+LoFi & Arty, Joakim \\
+\\
+Projektplan - Kolla upp kraven & Joakim \\
+Projektplan - Skriva första utkask & Arty, Joakim \\
+Projektplan - Komplettera & Arty \\
+Projektplan - Finish och lämna in & Arty, Joakim \\
+\\
+API - Skapa strukturen & Joakim \\
+API - Skriva API:et & Arty \\
+API - Testa och felsöka & Arty \\
+\\
+OpenShift - Kolla upp vad det är & Arty, Joakim \\
+OpenShift - Ladda upp det & Arty, Joakim \\
+\\
+Systemdocumentation - Ta reda på vad det är & Arty \\
+Systemdocumentation - Gör som man ska & Joakim \\
+\\
+Webbserver - Kolla på tutorialt & Arty, Joakim \\
+Webbserver - Skapa Webbservern & Joakim \\
+Webbserver - Lägga upp den live & Arty \\
+\\
+HTML/CSS - Skapa HTML/CSS utifrån Lofi & Arty, Joakim \\
+HTML/CSS - Mearge:a med webbservern & Arty, Joakim \\
+HTML/CSS - Redovisa allt & Arty, Joakim \\
+\\
+\hline 
+
+\end{tabularx}
+\end{table}
+
+\newpage
+
+
+
+
+
+\section{När ska vi göra det?}
+\textit{Vilka delmål finns det och vad är den slutgiltiga deadlinen?}
+
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|}
+
+\hline
+Projekt & Mål !- Deadline \\\hline 
+\\
+LoFi & Mål: v.37 Tisdag, Deadline: v.37 Torsdag \\
+\\
+Projektplan - Kolla upp kraven & Mål: Klar v.38, Deadline: v.39 Torsdag \\
+Projektplan - Skriva första utkask & Mål: Klar v.38, Deadline: v.39 Torsdag \\
+Projektplan - Komplettera & Mål: Början av v.39, Deadline: v.39 Torsdag \\
+Projektplan - Finish och lämna in & Mål: Början av v.39, Deadline: v.39 Torsdag \\
+\\
+API - Skapa strukturen & Mål: Senast v.38, Deadline: v.39 Fredag \\
+API - Skriva API:et & Mål: Senast v.38, Deadline: v.39 Fredag \\
+API - Testa och felsöka & Mål: Början av v.39, Deadline: v.39 Fredag \\
+\\
+OpenShift - Kolla upp vad det är & Mål: Klart v.41 Måndag, Deadline: v.41 Torsdag \\
+OpenShift - Ladda upp det & Mål: Klart v.41 Måndag, Deadline: v.41 Torsdag \\
+\\
+Systemdocumentation - Ta reda på vad det är & Mål: Klart v.41 Måndag, Deadline: v.41 Torsdag \\
+Systemdocumentation - Gör som man ska & Mål: Klart v.41 Måndag, Deadline: v.41 Torsdag \\
+\\
+Webbserver - Kolla på tutorialt & Mål: Klart v.41 Måndag, Deadline: v.42 \\
+Webbserver - Skapa Webbservern & Mål: Klart v.41 Måndag, Deadline: v.42 \\
+Webbserver - Lägga upp den live & Mål: Klart v.41 Måndag, Deadline: v.42 \\
+\\
+HTML/CSS - Skapa HTML/CSS utifrån Lofi & Mål: Klart v.41 Måndag, Deadline: v.42 \\
+HTML/CSS - Mearge:a med webbservern & Mål: Klart v.41 Måndag, Deadline: v.42 \\
+HTML/CSS - Redovisa allt & Mål: Klart v.41 Måndag, Deadline: v.42 \\
+\\
+\hline 
+
+\end{tabularx}
+\end{table}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

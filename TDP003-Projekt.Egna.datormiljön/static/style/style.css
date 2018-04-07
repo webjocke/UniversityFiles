@@ -1,0 +1,221 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #5882FB;
+}
+a{
+    color: #5882FB;
+    text-decoration: none;
+}
+
+/* === Header Section === */
+header{
+    height: 120px;
+    width: 100%;
+}
+#header_container{
+    margin: auto;
+    max-width: 700px;
+    height: 120px;
+    text-align: center;
+}
+header #header_container h1{
+    font-size: 40px;
+    color: white;
+    margin-top: 20px;
+    display: inline-block;
+    font-family: serif;
+    font-weight: lighter;
+}
+#home_href{
+    color: white;
+    background-color: none;
+}
+
+/* === Navigation Section === */
+nav{
+    background-color: #3a6dfc;
+    width: 100%;
+}
+#nav_container{
+    margin: 0px auto;
+    max-width: 700px;
+    text-align: center;
+    padding: 0px;
+}
+nav #nav_container ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    height: 44px;
+}
+nav #nav_container ul a{
+    float: left;
+    padding: 15px 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+}
+nav #nav_container ul a:hover{
+    background-color: rgba(0,0,0,.3);
+}
+nav #nav_container ul li{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* === Main Section === */
+main{
+    width: 100%;
+    background-color: white;
+    padding: 50px 0px;
+}
+main #main_container{
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+main #main_container section{
+    width: 100%;
+    margin-bottom: 50px;
+}
+main #main_container section article{
+    width: 100%;
+    clear: both;
+    margin-bottom: 30px;
+}
+main #main_container h2{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin: 0px 0px 26px 0px;
+    text-align: center;
+}
+main #main_container h3{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin: 0px 0px 10px 0px;
+    display: inline-block;
+}
+main #main_container p{
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin: 0px 0px 6px 0px;
+}
+main #main_container img{
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+.project_links{
+    width: 100%;
+}
+.project_links a{
+    line-height: 30px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.project_callToAction{
+    float: right;
+    background-color: #5882FB;
+    padding: 0px 5px;
+    color: white;
+}
+
+/* === Footer Section === */
+footer{
+    text-align: center;
+    width: 100%;
+}
+footer p{
+    font-family: serif;
+    font-style: italic;
+    color: rgba(255,255,255,.5);
+    line-height: 100px;
+}
+
+/* === Filter Box Styles === */
+#filter_box{
+    background-color: red
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#filter_box input[type="text"]{
+    padding: 5px;
+    width: 250px;
+}
+#filter_box select option{
+    padding: 5px;
+}
+#filter_box input[type="submit"]{
+    padding: 5px 15px;
+    background-color: #5882FB;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+}
+
+/* === Projektsidans style === */
+#projektsidans_img{
+    width: 400px;
+    height: 200px;
+    float: none !important;
+}
+#project_col_left{
+    width: 410px;
+    float: left;
+    box-sizing: border-box;
+}
+aside{
+    float: right;
+    width: 250px;
+    background-color: #5882FB;
+    color: white;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 20px;
+}
+aside ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+aside ul li{
+    margin-bottom: 10px;
+}
+#projekt_page_titel{
+    text-align: left !important;
+    margin: none !important;
+    display: inline-block;
+}
+h4{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin: 10px 0px 6px 0px;
+    text-align: center;
+}
+.fly{
+    float: right;
+    margin: 0px 5px 0px 0px;
+}
+#checkbox{
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>data</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/joajo229/Dropbox/Univeritetet/TDP003/TDP003/data.py">/home/joajo229/Dropbox/Univeritetet/TDP003/TDP003/data.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;­*­&nbsp;coding:&nbsp;utf­8&nbsp;­*­</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="operator.html">operator</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_project"><strong>get_project</strong></a>(db, id)</dt><dd><tt>Returns&nbsp;the&nbsp;project&nbsp;with&nbsp;the&nbsp;selected&nbsp;ID.</tt></dd></dl>
+ <dl><dt><a name="-get_project_count"><strong>get_project_count</strong></a>(db)</dt><dd><tt>Returns&nbsp;the&nbsp;amount&nbsp;of&nbsp;project&nbsp;in&nbsp;the&nbsp;databas</tt></dd></dl>
+ <dl><dt><a name="-get_technique_stats"><strong>get_technique_stats</strong></a>(db)</dt><dd><tt>Returns&nbsp;a&nbsp;custom&nbsp;list&nbsp;with&nbsp;techniques&nbsp;and&nbsp;its&nbsp;projects.</tt></dd></dl>
+ <dl><dt><a name="-get_techniques"><strong>get_techniques</strong></a>(db)</dt><dd><tt>Returns&nbsp;a&nbsp;sorted&nbsp;list&nbsp;of&nbsp;all&nbsp;tecniques</tt></dd></dl>
+ <dl><dt><a name="-load"><strong>load</strong></a>(file_json)</dt><dd><tt>Loads&nbsp;the&nbsp;specified&nbsp;file&nbsp;and&nbsp;returns&nbsp;it&nbsp;if&nbsp;found&nbsp;else&nbsp;returns&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-search"><strong>search</strong></a>(db, sort_by='start_date', sort_order='desc', techniques=None, search=None, search_fields=None)</dt><dd><tt>Handeling&nbsp;a&nbsp;search&nbsp;request.<br>
+Creates&nbsp;a&nbsp;empty&nbsp;templist.<br>
+Filters&nbsp;out&nbsp;all&nbsp;projects&nbsp;that&nbsp;has&nbsp;the&nbsp;right&nbsp;seach&nbsp;text&nbsp;in&nbsp;the&nbsp;right&nbsp;searchfields.<br>
+Filters&nbsp;out&nbsp;all&nbsp;projects&nbsp;with&nbsp;the&nbsp;right&nbsp;techniquies.<br>
+Then&nbsp;comes&nbsp;some&nbsp;code&nbsp;for&nbsp;selecting&nbsp;order.<br>
+Sortes&nbsp;the&nbsp;projects&nbsp;left.<br>
+Returns&nbsp;the&nbsp;projects&nbsp;that&nbsp;passed&nbsp;thought&nbsp;the&nbsp;filters.</tt></dd></dl>
+ <dl><dt><a name="-search_in_search"><strong>search_in_search</strong></a>(projects_left, search_fields, search, item, project)</dt><dd><tt>Checks&nbsp;if&nbsp;the&nbsp;search&nbsp;text&nbsp;is&nbsp;in&nbsp;the&nbsp;selected&nbsp;fields.&nbsp;Used&nbsp;the&nbsp;search_search&nbsp;function&nbsp;for&nbsp;help.</tt></dd></dl>
+ <dl><dt><a name="-search_search"><strong>search_search</strong></a>(value, search)</dt><dd><tt>Returns&nbsp;true&nbsp;of&nbsp;false&nbsp;if&nbsp;a&nbsp;specific&nbsp;spot&nbsp;in&nbsp;the&nbsp;search&nbsp;text&nbsp;matches&nbsp;any&nbsp;text&nbsp;in&nbsp;the&nbsp;search&nbsp;field.</tt></dd></dl>
+ <dl><dt><a name="-search_search_fields"><strong>search_search_fields</strong></a>(db, projects_left, search_fields, search)</dt><dd><tt>Checks&nbsp;if&nbsp;the&nbsp;searchs&nbsp;something&nbsp;in&nbsp;the&nbsp;search&nbsp;fields.&nbsp;Used&nbsp;the&nbsp;search_in_search&nbsp;function.</tt></dd></dl>
+ <dl><dt><a name="-search_techniques"><strong>search_techniques</strong></a>(projects_left, tech)</dt><dd><tt>Filters&nbsp;out&nbsp;the&nbsp;project&nbsp;that&nbsp;uses&nbsp;a&nbsp;specific&nbsp;techquies</tt></dd></dl>
+</td></tr></table>
+</body></html>

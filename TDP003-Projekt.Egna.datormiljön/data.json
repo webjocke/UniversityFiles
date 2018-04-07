@@ -1,0 +1,84 @@
+[
+  {
+    "start_date": "2009-09-07",
+    "short_description": "no",
+    "course_name": "OK\u00c4NT",
+    "long_description": "no no no",
+    "group_size": 4,
+    "academic_credits": "WUT?",
+    "lulz_had": "few",
+    "external_link": "YY",
+    "small_image": "https://www.ndr.de/fernsehen/sendungen/extra_3/extra8188_v-original.jpg",
+    "techniques_used": [
+      "c++",
+      "csv",
+      "python"
+    ],
+    "project_name": "NEJ",
+    "course_id": "TDP003",
+    "end_date": "2009-09-08",
+    "project_id": 3,
+    "big_image": "https://www.ndr.de/fernsehen/sendungen/extra_3/extra8188_v-original.jpg"
+  },
+  {
+    "start_date": "2009-09-08",
+    "short_description": "no",
+    "course_name": "OK\u00c4NT",
+    "long_description": "no no no",
+    "group_size": 6,
+    "academic_credits": "WUT?",
+    "lulz_had": "medium",
+    "external_link": "YY",
+    "small_image": "http://super-darter.de/wp-content/uploads/2011/09/Bild.png",
+    "techniques_used": ["ada","python"],
+    "ppls_used": [
+      "Arty",
+      "Jocke",
+      "Saddam H"
+    ],
+    "project_name": "2007",
+    "course_id": "TDP003",
+    "end_date": "2009-09-09",
+    "project_id": 2,
+    "big_image": "http://super-darter.de/wp-content/uploads/2011/09/Bild.png"
+  },
+  {
+    "start_date": "2009-09-06",
+    "short_description": "no",
+    "course_name": "HOHO",
+    "long_description": "no no no",
+    "group_size": 8,
+    "academic_credits": "WUT?",
+    "lulz_had": "over 9000",
+    "external_link": "YY",
+    "small_image": "http://super-darter.de/wp-content/uploads/2011/09/Bild.png",
+    "techniques_used": [
+
+    ],
+    "project_name": ",",
+    "course_id": " \"",
+    "end_date": "2009-09-07",
+    "project_id": 4,
+    "big_image": "http://super-darter.de/wp-content/uploads/2011/09/Bild.png"
+  },
+  {
+    "project_name": "The Underground Party Website",
+    "project_id": 1,
+    "start_date": "2016-09-06",
+    "end_date": "Pågår",
+    "short_description": "A website",
+    "long_description": "This is a website made by a weird guy. On the website, you can write posts about cats. If it's not about cats, you will be taken down. For sure. Don't even try. Please.",
+    "course_name": "TDP9000",
+    "course_id": "TDP9000",
+    "academic_credits": "40 HP",
+    "group_size": 2,
+    "techniques_used": [
+        "HTML",
+        "CSS",
+        "PHP"
+    ],
+    "small_image": "http://www.c1-partners.com/wp-content/uploads/2015/04/website-builder.jpg",
+    "big_image": "http://www.c1-partners.com/wp-content/uploads/2015/04/website-builder.jpg",
+    "external_link": "https://somewhatcompetent.net"
+  }
+]

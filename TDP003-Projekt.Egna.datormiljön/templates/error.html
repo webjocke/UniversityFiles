@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Error</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../static/style/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="header_container">
+                <h1><a id="home_href" href="../">Hemsidans titel</a></h1>
+            </div>
+        </header>
+        <nav>
+            <div id="nav_container">
+                <ul>
+                    <a href="../list"><li>Lista</li></a>
+                    <a href="../technologies"><li>Tekniker</li></a>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="main_container">
+                <section>
+                    <h2>{{titel}}</h2>
+                    <article style="text-align: center;" >
+                        <p>{{text}}</p>
+                    </article>
+                    <form action="/list" method="GET">
+                        <input autofocus type="text" name="search_box" placeholder="Sök efter någon nytt..." onClick="this.select();">
+                    </form>
+                </section>
+
+            </div>
+        </main>
+        <footer>
+            <p>©Copyright People</p>
+        </footer>
+    </body>
+</html>

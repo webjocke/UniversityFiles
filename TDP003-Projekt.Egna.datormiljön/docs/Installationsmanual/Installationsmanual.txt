@@ -1,0 +1,23 @@
+
+
+# Updatera alla appar
+sudo apt-get update
+
+# Installera Python-SetupTools
+sudo apt-get install python-setuptools
+
+# Ladda ner get-pip.py filen ifrån
+https://bootstrap.pypa.io/get-pip.py
+
+# Installera pip3.4 i python3 (pip3 kanske kanske redan vara installerad)
+python3 get-pip.py
+
+# Installera flask på python3 i pip3.4 (eller pip3 ifall förra steget faila)
+# Ninja installeras samtidigt automatiskt
+pip3.4 install flask
+# eller
+pip3 install flask
+
+# Testa om flask fungerar och allt blev installerat correct
+python3
+import flask

@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Revisionshistorik}{}% 1
+\BOOKMARK [1][-]{section.2}{intro}{}% 2
+\BOOKMARK [1][-]{section.3}{Kraven\040som\040hemsidan\040ska\040klara}{}% 3
+\BOOKMARK [1][-]{section.4}{bugga\040hittade}{}% 4
+\BOOKMARK [2][-]{subsubsection.4.0.1}{från error sidan gick inte att klicka på /technologies eller /list }{section.4}% 5
+\BOOKMARK [3][-]{subsubsection.4.0.2}{På index sidan var projekt start och slut länkar}{subsubsection.4.0.1}% 6
+\BOOKMARK [3][-]{subsubsection.4.0.3}{bilderna på indexsidan länkade till obefintligt projekt}{subsubsection.4.0.1}% 7
+\BOOKMARK [3][-]{subsubsection.4.0.4}{saknade en knap för asc/desc}{subsubsection.4.0.1}% 8
+\BOOKMARK [3][-]{subsubsection.4.0.5}{submit=Sök i url \(onödigt\)}{subsubsection.4.0.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.0.6}{page\040title\040fel}{subsubsection.4.0.1}% 10

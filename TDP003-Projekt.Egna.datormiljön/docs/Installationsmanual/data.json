@@ -1,0 +1,21 @@
+[
+  {
+    "start_date": "2015-09-01",
+    "short_description": "Portfolio",
+    "course_name": "Projekt: Egna datormiljön",
+    "long_description": "Ett portföljsystem för att visa upp arbetsresultat för potentiella kunder eller arbetsgivare.",
+    "group_size": 2,
+    "academic_credits": "6hp",
+    "lulz_had": "Väldigt många.",
+    "external_link": "http://www.ida.liu.se/~TDP003/",
+    "small_image": "none",
+    "techniques_used": [
+        python3, html5, css3
+    ],
+    "project_name": "Poolifort",
+    "course_id": "TDP003",
+    "end_date": "2015-10-31",
+    "project_no": 1,
+    "big_image": "none"
+  }
+]

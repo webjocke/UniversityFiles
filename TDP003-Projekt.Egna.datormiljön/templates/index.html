@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hem</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../static/style/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="header_container">
+                <h1><a id="home_href" href="./">Hemsidans titel</a></h1>
+            </div>
+        </header>
+        <nav>
+            <div id="nav_container">
+                <ul>
+                    <a href="list"><li>Lista</li></a>
+                    <a href="technologies"><li>Tekniker</li></a>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="main_container">
+                <section>
+                    <h2>About Me</h2>
+                    <article>
+                        <p>Nunc faucibus sagittis euismod. Pellentesque quis velit et lorem mattis porttitor nec eget dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. In turpis dolor, dictum in enim eget, condimentum egestas nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer a vulputate mi. Mauris mollis nulla et ullamcorper ornare. Nulla ullamcorper luctus sapien, at varius ligula varius in. Aenean vitae nulla ultrices, molestie mauris et, consectetur nibh. Phasellus pretium laoreet urna vel commodo.</p>
+                    </article>
+                </section>
+
+                
+                <section>
+                    <h2>Senaste projekt !!!</h2>
+                    {% for p in range(3) %}
+                    <article>
+                        <a href="project/{{projects[p]["project_id"]}}"><img alt="Projektets bild" title="Projektets bild" src="{{projects[p]["small_image"]}}" width="120" height="120"></a>
+                        <h3><a href="project/{{projects[p]["project_id"]}}">{{projects[p]["project_name"]}}</a></h3>
+                        <p>{{projects[p]["short_description"]}}</p>
+                        <div class="project_links">
+                            <a>{{projects[p]["start_date"]}} - {{projects[p]["end_date"]}}</a>
+                            <a href="project/{{projects[p]["project_id"]}}" class="project_callToAction">Mer om Projektet</a>
+                            {% for p in projects[p]["techniques_used"] %}
+                            <a class = "fly" href="technologies#{{p}}">{{p}}</a>
+                            {% endfor %}
+                            
+                        </div>
+                    </article>
+                    {% endfor %}
+                </section>
+                
+
+            </div>
+        </main>
+        <footer>
+            <p>©Copyright People</p>
+        </footer>
+    </body>
+</html>

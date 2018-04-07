@@ -1,0 +1,189 @@
+\documentclass{TDP003mall}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\newcommand{\version}{Version 1.3}
+\author{Arturas Aleksandrauskas\\
+  Joakim Johansson\\
+TDP003}
+\title{Testdokumentation}
+\date{2016-10-19}
+\rhead{Arturas Aleksandrauskas\\
+Joakim Johansson}
+
+
+
+
+
+
+\begin{document}
+\projectpage
+
+\tableofcontents
+
+\newpage
+\section{Revisionshistorik}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+Ver. & Revisionsbeskrivning & Datum \\\hline
+1.3 & All data för systemtesterna har lagts in & 161019 \\\hline
+1.2 & Alla kravspecifikationer har lagt in & 161019 \\\hline
+1.1 & Information om dagen då alla testade varandras system har dokumenterats och lagts in & 161019 \\\hline
+1.0 & Dokumentet skapas och enkel information har lagt in som en start & 161018 \\\hline
+\end{tabularx}
+\end{table}
+
+\section{Beskrivning av dokumentet}
+Detta är ett dokument som berättar hur det går för all testing av systemet. Det finns tabeller över vilka kravspecifikationer som finns och vilka versioner av systemet som klarade av vilka kravspecifikationer vid vilka datum.
+
+\newpage
+\section{Krav på presentationslagret}
+
+    \subsection{Krav 1.1 - Förstasidans URL}
+    
+        \subsubsection{Krav}
+        Förstasida med bilder. URL: /
+    
+        \subsubsection{Hur man testar detta krav}
+        
+        Test 1\\
+        Man går in på urlen "site.com/" och ser om man får upp förstasidan med bilder.
+    
+    \subsection{Krav 1.2 - Söksidan}
+    
+        \subsubsection{Krav}
+        Söksida som visar en lista över projekt med kort information om varje
+        projekt och gör det möjligt att sortera dessa samt söka bland dem genom
+        ett formulär på sidan. URL: /list
+    
+        \subsubsection{Hur man testar detta krav}
+        
+        Test 1\\
+        Man går in på söksidan och sedan så skriver man nej i sökrutan och klickar i python och c++ som tekniker som projekten måste ha. Då ska det bara komma upp ett projekt med Titeln NEJ, då fungerar det. Detta test testar så att man kan söka och klicka i tekniker samtidigt och att man kan söka med tecken då inte är skiftlägeskänsliga.
+        
+        Test 2\\
+        Man går in på söksidan och sedan så skriver man no i sökrutan och klickar i python som tekniker som projekten måste ha, väljer Slutdatum och neråtpil som sortering och sedan klickar på sök. Då ska det bara komma upp två projekt, en med titeln NEJ och ett projekt med titeln 2007, då fungerar det. Detta test testar så att man kan använda alla saker samtidigt, att sökningen fungerar i beskrivningen i projeketen och att listans sortering fungerar med pilarna och med sökfältet (Slutdatum osv).
+    
+    \subsection{Krav 1.3 - Projektsidan}
+    
+        \subsubsection{Krav}
+        Projektsida som visar fullständig information om ett projekt. GET-variabel
+        för att ange projekt-id: id. URL: /project/id - där id är projektets
+        nummer.
+    
+        \subsubsection{Hur man testar detta krav}
+        
+        Test 1\\
+        Man går in på site.com/project/<id> (där id är ett projekts id) och kollar om det projekt med ID med fyllde i kommer upp. Man ska även kolla så att man kan se fullständig information om projektet. Detta saker ska vara med i på projektsidan: Stor bild, namn, lång beskrivning, startdatum, slutdatum, personer som var med, kursnamn och projekt id.
+        
+        Test 2\\
+        Man går in på site.com/project/<id> (där id är i vanliga fall projekts id) men denna gång skriver man i bokstäver iställer för ett ID. Man ska då kolla vad som händer och så att det kommer upp ett relevant felmeddelande.
+    
+    \subsection{Krav 1.4 - Tekniksidan}
+    
+        \subsubsection{Krav}
+        Tekniksida som visar information om alla projekt utifrån använda tekniker.
+        URL: /techniques
+    
+        \subsubsection{Hur man testar detta krav}
+        
+        Test 1\\
+        Man går in på teknik-sidan (/techniques) och ser om man kan se alla tekniker på ett enkelt sätt och sedan lätt kan hitta de projekt som använder den tekniken.
+    
+    \subsection{Krav 1.5 - Projektbilder}
+    
+        \subsubsection{Krav}
+        För varje projekt ska en liten bild visas på söksidan och en stor på
+        projektsidan. Det behöver inte vara samma bild. Bildtext för varje bild
+        skall finnas.
+    
+        \subsubsection{Hur man testar detta krav}
+        
+        Test 1\\
+        Man går in på list-sidan (/list) och kollar om varje projekt har en liten bild och sedan klickar man på projektet och kollar om det finns en stor bild på den sidan. Både den stora och den lilla bilden ska gå att hålla musen över och se en liten relevant text komma upp som är bildtexten. 
+    
+    \subsection{Krav 1.6 - Error meddelanden}
+    
+        \subsubsection{Krav}
+        Vid fel ska systemet skriva ut informativa meddelanden till användaren på
+        en lämplig nivå för en slutanvändare. (Det vill säga, systemet ska fånga
+        och omvandla felkoder och statuskoder till begripliga meddelanden.)
+    
+        \subsubsection{Hur man testar detta krav}
+        
+        Test 1\\
+        På projektsidan, om man slår in ett id i URL:en som inte finns, så ska det komma upp ett begripligt meddelande för användaren som säger att projektet inte finns. 
+        
+        Test 2\\
+        Sedan om man går in på site.com/text, där text är en url som inte finns, ska det komma upp ett error 404 felmeddelande för användaren.
+
+
+\newpage
+\section{Dagbok för systemtesterna}
+
+
+    \subsection*{19 Oktober 2016 - Testning av Version 1.1}
+    \begin{table}[!h]
+    \begin{tabularx}{\linewidth}{|l|X|l|}
+    \hline
+    Krav som har testats & Resultat & Datum vid testet \\\hline
+    Krav 1.1 - Förstasidans URL & Klarade testet & 161019 \\\hline
+    Krav 1.2 - Söksidan & Klarade testet & 161019 \\\hline
+    Krav 1.3 - Projektsidan & Klarade testet & 161019 \\\hline
+    Krav 1.4 - Tekniksidan & Klarade testet & 161019 \\\hline
+    Krav 1.5 - Projektbilder & Klarade testet & 161019 \\\hline
+    Krav 1.6 - Error meddelanden & Klarade testet & 161019 \\\hline
+    \end{tabularx}
+    \end{table}
+    
+    \subsection*{18 Oktober 2016 - Rättat till buggar}
+    Testdag med IP-klassen och en hög med buggar har hittats. Dessa är nu åtgärdade och systemet förbereds för en ny testning imorgon.
+
+    \subsection*{17 Oktober 2016 - Testning av Version 1.0}
+    \begin{table}[!h]
+    \begin{tabularx}{\linewidth}{|l|X|l|}
+    \hline
+    Krav som har testats & Resultat & Datum vid testet \\\hline
+    Krav 1.1 - Förstasidans URL & Klarade testet & 161017 \\\hline
+    Krav 1.2 - Söksidan & Klarade INTE testet & 161017 \\\hline
+    Krav 1.3 - Projektsidan & Klarade testet & 161017 \\\hline
+    Krav 1.4 - Tekniksidan & Klarade testet & 161017 \\\hline
+    Krav 1.5 - Projektbilder & Klarade INTE testet & 161017 \\\hline
+    Krav 1.6 - Error meddelanden & Klarade INTE testet & 161017 \\\hline
+    \end{tabularx}
+    \end{table}
+    
+    
+\newpage
+\section{Övrig information}
+
+    \subsection{Buggar hittade med hjälp av IP - 18 Okt}
+
+        \subsubsection*{Meny-länkarna från Error-sidan}
+        Vi upptäckte att när man är på error sidan för 404 eller liknande så fungerar inte huvudmenyns länkar som de ska. Vi fixade detta genom att sätta detta "../list.html" framför länkarna, tillskillnad ifrån som det var innan: "list.html". Vi listade senare ut att detta är pågrund av att om man är på errorsidan "localhost:5000/hej/då" och blir länkad till "list.html" så kommer webläsaren försöka gå till "localhost:5000/hej/list.html", vilket inte finns. Men genom att ändra länken till "../list.html" så kommer den gå upp en nivå och försöka gå till "localhost:5000/list.html", vilket fungerar!
+        
+        Vi gjorde samma sak för alla meny länkarna och home länken.
+        
+        \subsubsection*{Senaste Projektens konstiga datumlänkar}
+        På indexsidan, under "Senaste Projekten" så har varje projekt ett start- och slutdatum. Dessa såg ut som en länk men de var inte länkade någonstans. Vi fixade det genom att bara ta bort href attributerna på de p-taggarna.
+    
+        \subsubsection*{Senaste Projektens konstiga bildlänkar}
+        När man står på index sidan och klickar på en bild som tillhör ett projekt så ska man komma till detta projektets "mer information" sida men dessa länkar var länkade till "project/" vilket såklart blir en error då vi inte skickade med någon id till "project"-sidan. Detta löste vi genom att lägga in en ninja funktion i html-mallen som sa att den skulle skriva ut projektets id precis efter "project/". Efter det har det fungerar bra.
+        
+        \subsubsection*{Inget val för ASC/DESC}
+        Vi hade inget sätt för besökare att välja vilket håll de ville sortera listan men alla projekt på "list"-sidan. Så vi lade till en liten dropdown där man kan välja pil upp eller pil ner vilket står för desc eller asc. Sedan skickade vi med informationen till servern precis som med all annan sök data som kommer ifrån list-sidan. Vi skickar sedan in variabeln till sökfunktionen i API:et då den funktionen är redan gjort för att kunna ta emot en variabel för listans ordning.
+        
+        Efter det så har det fungerat väldigt bra!
+        
+        \subsubsection*{Submit i GET requestet på list-sidan}
+        Vi märkte att när vi klickade på sök knappen på list-sidan så skickades det med en variabel som heter submit fast vi inte behövde den. Detta stör förstås inte funktionen av hemsidan men det är bra att ta borten för att det inte behövs för att inte skapa förvirring i framtiden till varför den finns där. Vi löste det genom att ta bort attributen "name" på sök-knappen på list-sidan.
+        
+        \subsubsection*{Konstiga sidtitlar}
+        Vi hade glömt att ändra sidtitlarna ifrån de gamla standard titlarna på sidorna, men det löst vi lätt genom att skriva någon trevligt i varje titel-tagg i varje html-mall.
+
+
+
+\end{document}
+

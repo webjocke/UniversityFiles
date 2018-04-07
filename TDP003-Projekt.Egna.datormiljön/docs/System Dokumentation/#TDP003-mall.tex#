@@ -1,0 +1,243 @@
+\documentclass{TDP003mall}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\newcommand{\version}{Version 1.1}
+\author{Arturas Aleksandrauskas\\
+  Joakim Johansson}
+\title{Systemdokumentation}
+\date{2016-10-12}
+\rhead{Arturas Aleksandrauskas\\
+Joakim Johansson}
+
+
+
+\begin{document}
+\projectpage
+
+\tableofcontents
+
+\newpage
+\section{Revisionshistorik}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+Ver. & Revisionsbeskrivning & Datum \\\hline
+2.2 & Autogenererat dokumentation utifrån filernas kommentarer & 161017 \\\hline
+2.1 & Lagt till mer kommentarer i filerna & 161017 \\\hline
+2.0 & Börjat fixa kompletteringarna & 161017 \\\hline
+1.5 & \"Logging\", \"Error handling\" och \"Tools\" inlagt och första utkast inlämnat & 161016 \\\hline
+1.4 & \"Description of the system components\" - \"Datalagret\" är första utkast inlämnat & 161016 \\\hline
+1.3 & \"Description of the system components\" - \"Presentationssidan\" är klart & 161015 \\\hline
+1.2 & \"User Functions\" och \"Folder Structure\" sectionerna är skrivna tillagda & 161015 \\\hline
+1.1 & Skissat och lagt till sequensdiagram och skrivit klart \"Overview of the system\" och Frontpage exemplet & 161014 \\\hline
+1.0 & Dokumentet skapas och enkel information har lagt in som en start, \"A simple description\" och \"Installationsmanual\" är tillagt och klart & 161012 \\\hline
+\end{tabularx}
+\end{table}
+
+\section{A simple description}
+This project is a simple webpage that uses a python backend that servs the pages thought a module called Flask.
+
+The purposes of this website i to present all list all projects the user has previously been involved in. A visitor of the site can scroll though all, or search for a specific project.\\
+
+\section{Installationsmanual}
+If you got this systemdocumentation file, you have probably also got a seperate pdf file that is the Installationmanual. Use that if you are going to install the system om a new computer.\\
+
+In case you haven't got the PDF, here is the link to an online version:
+
+\url{https://gitlab.ida.liu.se/antsu07/tdp003-installationsmanual-2016/blob/master/installationsmanual.pdf}
+
+
+
+\newpage
+\section{User Funktions}
+The user will we able to navigate around on four differant pages.\\
+
+\includegraphics[width=\textwidth]{bilder/headerandnav.png}\\
+
+On the top of the webpage there is a header with the name of the website, wich the user always will be able to click to come back to the frontpage really fast.\\
+
+Under the header, there is a navigation bar with two links. The List page and the Technologies page. This navigationbar with be accessable from all pages on the site.\\
+
+The first page is a simple frontpage that displays userful about-information about the websites author. The page also displays all the three latest projects. Visitors can ofcource click on the projects to show more information.\\
+
+\includegraphics[width=\textwidth]{bilder/search.png}
+
+The second page is the List page, which the user can get to by clicking in the navigationbar or searching from the 404 error page. The list page is made up of a long list of all projects in the database. There is also a box of tools filter the list. Visitors can search with free-text, choose requierd techniqes, and choose how the list should be ordered. And ofcause there is a search button to apply the filters to the list.\\
+
+The third page is the Technologies page. This is more of a overview over all projects with the techniques in focus. This page is great for visitors to quickly see what typ of techniques the author users the most. But it is also really handy when a visitor looks att a project that uses ex. python and want to now other project the author have done where he also has used python.\\
+
+The fifth page is a page that only shows a specific project. This page is hidden in the menu and you can only get to the page if you click on a project somewhere. This page shows a lot of information about the project, ex. the tecniques used, start and end date, peoples in the project and more. If the visitor clicks on a technique, he will be directed to the technique page and moved down to the right place for the clicked tech.\\
+
+The last page we have are a error page that are displayed if the user tries to go to a page that don't exist. Simply as that. The page as a title, a short text and a search box so that the user can continue trying to find the right page.\\
+
+
+
+\newpage
+\section{Folder structur with description of the files}
+
+\begin{lstlisting}[backgroundcolor=\color{lightgray}]
+.
+  Root/
+      doc/
+      static/
+          images/
+          style/
+              style.css
+      templates/
+          index.html
+          list.html
+          project.html
+          technologies.html
+          error.html
+      README.md
+      data.json
+      data.py
+      data_test.py
+      myFlaskProject.py
+      logfile.log
+.
+      
+\end{lstlisting}
+
+\subsubsection{Folder: doc}
+A folder with all documents related to this project but isn't actulay code, like this document for example.\\
+
+You can also find, the projectplan document, lofi prototype and the developers diary if you wanna follow the development, in this folder.
+
+\subsubsection{Folder: static}
+A folder with all the static files, like css, images and fonts.\\
+
+We have no images yet, but we have added a folder incase we wanna do future graphical enhancements to the site. We also have a folder with the name style with a single css file inside it that is used to style all pages.\\
+
+\subsubsection{Folder: templates}
+A folder for all the HTML templates.\\
+
+We user five templates. One for each page on the site. index.html for the front page, list.html for the list page, project.html for the page that shows one project, technologies.html for the page with all the projects sorted be tech and error.html for the error page.
+
+\subsubsection{File: README.md}
+A description file with info about the project and good information for outside people incase they open up this project and don't know what it is.
+
+\subsubsection{File: data.json}
+Our main databas name with all data from all the projects. Used be the API.
+
+\subsubsection{File: data.py}
+This is the API-side of the project. Gets imported by the flask file and is used on almost every HTTP request.
+
+\subsubsection{File: data test.py}
+This is a test file that is used to testa the data.py file so that it is ok on all the requirments made up be the univerisity.
+
+\subsubsection{File: myFlaskProject.py}
+This is the main flask file that is active running on the server and waiting for HTTP request to handle.
+
+\subsubsection{logfile.log}
+This is the log file that is created by flasks and contain alla logs and actions that flask have done.
+
+
+
+
+\newpage
+\section{Overview of the system}
+The system is a basic system for handeling some webpage requests and some data.\\
+
+It's made up of a client side and a server side. The clientside is simply the users browser, with the functions of requesting a page using the GET method.\\
+
+The server side is made up of two main processes, the python flask webserver file and the API file that handles alla the data. The API file uses a JSON file to store all the informationen.\\
+
+\includegraphics[width=\textwidth]{bilder/diagram_overview.png}
+
+
+
+
+\newpage
+\subsection{Example Senario - Frontpage}
+When the user goes to the root of the webpage, the browser sends a request to the the server where flask is waiting and have a function bind to requests for the root directory. In this case, the hello() funktion is run. Hello() does two things, requests the database file from the API and then sends it back to the API layer with the request that it should search and filter the file. In this case we only the sends the database parameter to get all the latest projects with the newest projects first, but we could specifiy multiply parameters to tell the search function how it should filter the projects.\\
+
+When the Flask layer get the filtered data, it imports the HTML templates, css files and other static files like images. Then it generates the HTML-files from the templates and the filtrered data, and finally sends it back to the users browser that displays the webpage to the user.\\
+
+\includegraphics[width=\textwidth]{bilder/frontsida.png}
+
+
+
+
+\newpage
+\section{Description of the system components}
+
+\subsection{Client Browser}
+Client Browser is stylede with CSS3 and built with HTML5
+HTML files are stord in /templates and CSS files are stord in static/style
+
+\subsection{Flask Webserver}
+\subsubsection{hello()}
+    Handling requests for the index page. Returns a html page with some css.
+    This function loads the all data thoguht the API and uses the search-function of the API to filter out the latest projects.
+    Uses the ninja function render\_template to combine the filtered project with the html-page
+\subsubsection{techniques()}
+    Handling requests for the technologies page. Returns a html page with some css.
+    This function loads the all data thoguht the API and uses the get\_technique\_stats-function of the API that returns all project stats for the tech page.
+    Uses the ninja function render\_template to combine the tech-data with the html-page
+\subsubsection{list()}
+    Handling requests for the list page. Returns a html page with some css. Uses the methods GET.
+    This function loads the all data thoguht the API and uses the get\_techniques-function of the API that returns a list of all techniques for the checkboxes on the page.
+    Then it pushes the data the API:s search-function.
+    Also have some selfexplanitory code for autofilling the page on load.
+    Uses the ninja function render\_template to combine the data with the html-page
+\subsubsection{project(xid)}
+    Handling requests for the project page. Returns a html page with some css. This function uses the id-number form the URL request.
+    This function loads the all data thoguht the API and uses the get\_project-function of the API that returns the required project.
+    Uses the ninja function render\_template to combine the data with the html-page
+    Also has some error handling for is the types a unexpected id in the URL, the it renders the error page instead of the regular page.
+\subsubsection{error(e)}
+    Handling error requests.
+    Uses the ninja function render\_template to combine the data with the html-page
+
+
+\subsection{Datalager API}
+\subsubsection{load(file\_json)}
+  Loads the specified file and returns it if found else returns None
+  \autocite{\footnote{\url{ http://www.ida.liu.se/~TDP003/current/portfolio-api_python3/}}:2016}
+\subsubsection{get\_project\_count(db)}
+  Takes in the database and returns amout of project in the database
+\subsubsection{get\_project(db, id)}
+  Returns the project with the selected ID.
+\subsubsection{search(db, sort\_by='start_date', sort\_order='desc', techniques=None, search=None, search\_fields=None)}
+  Handeling a search request.
+  Creates a empty templist.
+  Filters out all projects that has the right seach text in the right searchfields.
+  Filters out all projects with the right techniquies.
+  Then comes some code for selecting order.
+  Sortes the projects left.
+  Returns the projects that passed thought the filters.
+\subsubsection{get\_techniques(db)}
+  Returns a sorted list of all tecniques
+\subsubsection{get\_technique\_stats(db)}
+  Returns a custom list with techniques and its projects.
+\subsubsection{search\_in\_search(projects\_left, search\_fields, search, item, project)}
+  Checks if the search text is in the selected fields. Used the search\_search function for help.
+\subsubsection{search\_search(value, search)}
+  Returns true of false if a specific spot in the search text matches any text in the search field.
+\subsubsection{search\_search\_fields(db, projects\_left, search\_fields, search)}
+  Checks if the searchs something in the search fields. Used the search\_in\_search function.
+\subsubsection{search\_techniques(projects\_left, tech)}
+  Filters out the project that uses a specific techquies
+
+
+\newpage
+\section{Others}
+
+\subsection{Logging}
+Flask is setup in a way that it should log every action that happends in a logfile in the root directory named logfile.log.
+
+\subsection{Error handling}
+The website redirects the user to the error page incase they tries to go to a url that is not valid.\\
+
+If you want to enable debug mode in flask, simply add debug=true as a parameter in the app.run(). You will then be able to see every action in the terminal and you will also be able to edit the files and see the change on the page without restarting the server.
+
+\subsection{Tools and programs}
+To compile all the documents in the doc folder, you have to use a latex compiler to export a PDF from the code. On linux, we recomend using the command latexmk -pvc -xelatex and then the filename of the .tex file of the wanted document.
+
+
+
+\end{document}
+

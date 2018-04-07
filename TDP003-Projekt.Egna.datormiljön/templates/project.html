@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{project["project_name"]}}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../static/style/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="header_container">
+                <h1><a id="home_href" href="../">Hemsidans titel</a></h1>
+            </div>
+        </header>
+        <nav>
+            <div id="nav_container">
+                <ul>
+                    <a href="../list"><li>Lista</li></a>
+                    <a href="../technologies"><li>Tekniker</li></a>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="main_container">
+
+                <!-- TEKNIK 1 -->
+                <section>
+
+                    <div id="project_col_left">
+                        <img alt="Projektets bild" title="Projektets bild" id="projektsidans_img" src="{{project["big_image"]}}">
+                        <h4 id="projekt_page_titel">{{project["project_name"]}}</h4>
+                        <p>{{project["long_description"]}}</p>
+                    </div>
+
+                    <aside>
+                        <ul>
+                            <li>Start Datum: {{project["start_date"]}}</li>
+                            <li>Slut Datum: {{project["end_date"]}}</li>
+                            <li>Tekniker: 
+                            {% for p in project["techniques_used"] %}
+                                <a style = "color : orange "href="../technologies#{{p}}">{{p}}</a>
+                            {% endfor %} 
+                            </li>
+                            <li>Projekt ID: {{project["project_id"]}}</li>
+                            <li>Personer:  
+                            {% for p in project["ppls_used"] %}
+                                {{p}}
+                            {% endfor %} 
+                            </li>
+                        </ul>
+                    </aside>
+
+                </section>
+                <div style="clear:both"></div>
+            </div>
+        </main>
+        <footer>
+            <p>©Copyright People</p>
+        </footer>
+    </body>
+</html>
+
+
+
+
+

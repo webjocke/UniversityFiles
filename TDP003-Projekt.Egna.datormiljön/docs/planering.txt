@@ -1,0 +1,46 @@
+Planering för projekt TDP003
+
+v.36
+
+Göra git-övningsuppgifterna
+Kolla på Latex och börja skissa på projektplanen
+Göra en planering och lämna in den i tid (torsdag 23:59) via git
+
+v.37
+
+Få en konkret bild av vad som förväntas att göra under projektet.
+Deadline för manual och prototyp
+
+v.38
+
+Deadline med att bli klara med dokumenten. (torsdag 23:59)
+Mjuk deadline för installationsmanualen torsdag (skriven i latex)
+
+v.39
+
+Deadline för att redovisa datalager (torsdag 23:59)
+Deadline för installationsmanualen
+Seminarium på fredag
+
+v.40
+
+Börja med presentationslagret
+Jobba med datalager och presentationslager
+Mjuk deadline systemdokumentation
+
+v.41
+
+Hård deadline systemdokumentation (torsdag 23:59)
+Jobba eget efter planeringen
+Dmg controll på hela projektet
+
+v.42 Tentaperiod
+
+Testa varandras projekt och dokumentera problem som upptäcks i våra system.
+Torsdag, deadline för färdigställda systemet och testdokumentationen.
+MJUKT SLUT
+Slutlig kodinlämning via git och sedan muntlig tenta
+
+v.43 Tentaperiod
+
+Slutlig kodinlämning via git och sedan muntlig tenta

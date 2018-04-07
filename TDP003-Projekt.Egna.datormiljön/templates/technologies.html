@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tekniker i mina Projekt</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../../static/style/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="header_container">
+                <h1><a id="home_href" href="./">Hemsidans titel</a></h1>
+            </div>
+        </header>
+        <nav>
+            <div id="nav_container">
+                <ul>
+                    <a href="list"><li>Lista</li></a>
+                    <a href="technologies"><li>Tekniker</li></a>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="main_container">
+
+                {% for tech_name,projects_in_tech in projects.items() %}
+                <section>
+                    <h2 id = "{{ tech_name }}" >{{ tech_name }}</h2>
+
+                    {% for project in projects_in_tech %}
+                        <h3><a href="project/{{project["id"]}}">{{project["name"]}}</a></h3><br>
+                    {% endfor %}
+                </section>
+                {% endfor %}
+
+            </div>
+        </main>
+        <footer>
+            <p>©Copyright People</p>
+        </footer>
+    </body>
+</html>
+
+
+
+
+
