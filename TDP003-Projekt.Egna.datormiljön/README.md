@@ -8,20 +8,22 @@ Ett projekt som genomförs av Joakim och Arturas.
 * Flask (the python3 verion)
 
 ### Getting flask for Python 3.x
-'''
-pip3 install flask / apt install python3-flask
-'''
+```
+pip3 install flask
+[or without pip]
+apt install python3-flask
+```
 
 ### Running the application
-'''
+```
 python3 myFlaskProject.py
-'''
+```
 
 ### Using a new python enviroment (Optinally)
-'''
+```
 $ env
 $ python3 -m vertualenv <env_name>
 $ source <env_name>/bin/activate
-# Installing and running application
+[Installing and running application]
 $ deactivate
-'''
+```
