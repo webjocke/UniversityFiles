@@ -9,14 +9,14 @@ Ett projekt som genomförs av Joakim och Arturas.
 
 ### Getting flask for Python 3.x
 ```
-pip3 install flask
+$ pip3 install flask
 [or without pip]
-apt install python3-flask
+$ apt install python3-flask
 ```
 
 ### Running the application
 ```
-python3 myFlaskProject.py
+$ python3 myFlaskProject.py
 ```
 
 ### Using a new python enviroment (Optinally)
