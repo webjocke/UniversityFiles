@@ -4,4 +4,4 @@ A game project! We built a 2D fighting game using c++ and sfml. It's called Game
 The project files can be found in it's own repository at [this link](https://github.com/webjocke/Game38).
 
 Link to the offical course website:
-[https://www.ida.liu.se/~TDP004](https://www.ida.liu.se/~TDP004)
+[https://www.ida.liu.se/~TDP005](https://www.ida.liu.se/~TDP005)
